@@ -17,5 +17,5 @@ echo "\n  ${COLOR}   NORMINETTE ${WHITE} \n"
 norminette -R CheckForbiddenSourceHeader ../c0$1/ex0$2/ft_*
 
 echo "\n\n"
-cc -Wall -Wextra -Werror ../c0$1/ex0$2/ft_* ./c0$1/ex0$2/main.c && echo -e "\n\n ${COLOR}   OUTPUT ${WHITE} \n" && ./a.out
+cc -Wall -Wextra -Werror ../c0$1/ex0$2/ft_* ./c0$1/ex0$2/main.c && echo "\n\n ${COLOR}   OUTPUT ${WHITE} \n" && ./a.out
 
