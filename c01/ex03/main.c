@@ -12,6 +12,6 @@ int	main(void)
 	int *mod = &mod_result;
 
 	ft_div_mod(a, b, div, mod);
-	printf("%d divided by %d is %d \n", a, b, *div);
-	printf("%d modulo %d is %d \n", a, b, *mod);
+	printf("%d divided by %d = %d (should be 4) \n", a, b, *div);
+	printf("%d modulo %d = %d (should be 1) \n", a, b, *mod);
 }

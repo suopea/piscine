@@ -4,7 +4,8 @@ int	ft_strlen(char *str);
 
 int	main(void)
 {
-	char string[] = "test";
-	int	out = ft_strlen(&string[0]);
-	printf("%i", out);
+	char string[] = "how long am I";
+	int	out = ft_strlen(string);
+	printf("should be 13: %i", out);
+
 }

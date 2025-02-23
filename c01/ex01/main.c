@@ -16,5 +16,6 @@ int main(void)
 	int ********nbr8 = &nbr7;
 	int *********nbr9 = &nbr8;
 	ft_ultimate_ft(nbr9);
-	printf("%d", *********nbr9);
+	printf("Should be 42 \n");
+	printf("Result: %d \n", number);
 }

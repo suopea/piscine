@@ -11,5 +11,5 @@ int	main(void)
 
 	printf("Calculating %d by %d... \n", x, y);
 	ft_ultimate_div_mod(a, b);
-	printf("Result of division %d, remainder %d \n", x, y);
+	printf("Result of division: %d \nremainder: %d \nboth should be 1 \n", x, y);
 }
