@@ -15,5 +15,6 @@ cat ../c$1/ex$2/ft_*
 echo "\n  ${COLOR}   NORMINETTE ${WHITE} \n"
 norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/ft_*
 
-cc -Wall -Wextra -Werror ../c$1/ex$2/ft_* ./c$1/ex$2/main.c && echo "\n ${COLOR}    OUTPUT ${WHITE} \n" && ./a.out
+echo "\n ${COLOR}    OUTPUT ${WHITE} \n" 
+cc -Wall -Wextra -Werror ../c$1/ex$2/ft_* ./c$1/ex$2/main.c && ./a.out
 
