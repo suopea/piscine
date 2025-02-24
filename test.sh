@@ -7,14 +7,14 @@ COLOR='\033[4;37m'
 WHITE='\033[0m'
 
 echo "\n\n${COLOR}                                                                      TEST FILE${WHITE} \n"
-cat ./c$1/ex$2/main.c | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
+cat ./c$1/ex$2/*.c | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
 echo "\n\n${COLOR}                                                                  EXERCISE FILE${WHITE}\n"
-cat ../c$1/ex$2/ft_* | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
+cat ../c$1/ex$2/* | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
 echo "\n\n${COLOR}                                                                     NORMINETTE${WHITE} \n"
-norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/ft_*
+norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/*
 
 echo "\n\n${COLOR}                                                                         OUTPUT${WHITE} \n" 
-cc -Wall -Wextra -Werror ../c$1/ex$2/ft_* ./c$1/ex$2/main.c && ./a.out
+cc -Wall -Wextra -Werror ../c$1/ex$2/* ./c$1/ex$2/*.c && ./a.out
 
