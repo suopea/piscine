@@ -17,3 +17,5 @@ So the structure should be:
 some directory / c01 (the repository of the evaluated person) / ex00, ex01 etc
 some directory / testbest (this repository) / c01, c02 etc / ex00, ex01 etc
 ```
+
+For even easier testing, you can run `alias tt='sh test.sh'. After that you can do for example `tt 01 05`

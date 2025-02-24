@@ -7,10 +7,10 @@ COLOR='\033[1;36m'
 WHITE='\033[0m'
 
 echo "\n  ${COLOR}   TEST FILE ${WHITE} \n"
-cat ./c$1/ex$2/main.c
+cat ./c$1/ex$2/main.c | sed 's/\t/    /g'
 
 echo "\n  ${COLOR}   EXERCISE FILE ${WHITE}\n"
-cat ../c$1/ex$2/ft_*
+cat ../c$1/ex$2/ft_* | sed 's/\t/    /g'
 
 echo "\n  ${COLOR}   NORMINETTE ${WHITE} \n"
 norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/ft_*
