@@ -9,7 +9,7 @@ int	main(void)
 	char	original[] = "mango";
 	char	copy[] = "guava"; 
 
-	printf("(using ft_strcpy)\nShould be mango");
+	printf("(using ft_strcpy)\nShould be mango without newline");
 	printf(":\n");
 	ft_strcpy(copy, original);
 
@@ -19,7 +19,7 @@ int	main(void)
 	char	original2[] = "mango";
 	char	copy2[] = "guava"; 
 
-	printf("\n(using strcpy)\nShould be mango");
+	printf("\n(using strcpy)\nShould be mango without newline");
 	printf(":\n");
 	strcpy(copy2, original2);
 
