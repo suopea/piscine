@@ -11,7 +11,7 @@ int	main(void)
 	char	original[] = "banana banana terracotta";
 	char	copy[23];
 
-	printf("Should be banana:\n");
+	printf("Should be banana: (n longer than src)\n");
 
 //strncpy(copy, original, 6);
 	ft_strncpy(copy, original, 6);
@@ -21,12 +21,12 @@ int	main(void)
 // n can be shorter than src, in which case output won't be null-terminated
 
 	char	original_2[] = "banana";
-	char	copy_2[23];
+	char	copy_2[24] = "banana banana terracotta";
 
-	printf("\n\nShould also be banana:\n");
+	printf("\n\nShould also be banana: (n shorter than src)\n");
 	
 //strncpy(copy_2, original_2, 23);
-	ft_strncpy(copy_2, original_2, 23);
+	ft_strncpy(copy_2, original_2, 24);
 
 	write(1, copy_2, sizeof(copy_2));
 
