@@ -15,6 +15,6 @@ int	main(void)
 	printf("%s\n", orig);
 
 	printf("\n\noutput of ft_strcat:  (should be the same)\n");
-	strcat(orig2, to_add2);
+	ft_strcat(orig2, to_add2);
 	printf("%s\n", orig2);
 }
