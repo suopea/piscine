@@ -7,6 +7,11 @@ COLOR='\033[4;37m'
 WHITE='\033[0m'
 
 echo "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+cat ../s/c$1/ex$2/*.c | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
+
+echo "\n\n\n\n\n\n\n\n\n"
+
 echo "\n\n\n${COLOR}                                                                      TEST FILE${WHITE} \n\n"
 cat ./c$1/ex$2/*.c | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
