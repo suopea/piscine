@@ -7,23 +7,24 @@ char	*ft_strcpy(char *dest, char *src);
 int	main(void)
 {
 	char	original[] = "mango";
-	char	copy[] = "guava"; 
+	char	copy[] = "pineapple"; 
+	char	*output;
 
-	printf("(using ft_strcpy)\nShould be mango without newline");
-	printf(":\n");
-	ft_strcpy(copy, original);
+	printf("using ft_strcpy\n");
+	output = ft_strcpy(copy, original);
 
-	write(1, copy, sizeof(copy));
+	write(1, output, sizeof(output));
 
 
 	char	original2[] = "mango";
-	char	copy2[] = "guava"; 
+	char	copy2[] = "pineapple"; 
+	char	*output2;
 
-	printf("\n(using strcpy)\nShould be mango without newline");
+	printf("\n\nUsing strcpy, should be same");
 	printf(":\n");
-	strcpy(copy2, original2);
+	output2 = strcpy(copy2, original2);
 
-	write(1, copy2, sizeof(copy2));
+	write(1, output2, sizeof(output2));
 	return (0);
 }
 
