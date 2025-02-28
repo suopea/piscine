@@ -25,6 +25,7 @@ norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/*.c | sed 's/Error*/Error\o
 echo "\n\n\n${UNDERLINE}                                                                         OUTPUT${WHITE} \n\n" 
 cc -Wall -Wextra -Werror ../c$1/ex$2/*.c ./c$1/ex$2/*.c && ./a.out
 
+echo "\n\n"
 cat ../c$1/ex$2/*.c | grep "#include" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o033[0m is it allowed?/' | sed 's/#include/\n/'
 
 echo "\n\n${UNDERLINE}                                                                    ${WHITE}  c$1 ex$2\n"

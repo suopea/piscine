@@ -28,4 +28,8 @@ int	main(void)
 	test(47806, "0123456789ABCDEF", "BABE");
 	test(INT_MAX, "0123456789ABCDEF", "7FFFFFFF");
 	test(INT_MIN, "0123456789ABCDEF", "-80000000");
+	test(123, "", "");
+	test(123, "666", "");
+	test(123, "123+", "");
+	test(123, "123-", "");
 }

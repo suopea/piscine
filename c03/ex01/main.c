@@ -18,7 +18,7 @@ int	main(void)
 
 	printf("\n\noutput of ft_strncmp:  (should be the same)\n");
 
-	printf("%i\n", strncmp(str1, str2, 10));
-	printf("%i\n", strncmp(str1, str3, 10));
-	printf("%i\n", strncmp(str1, str4, 10));
+	printf("%i\n", ft_strncmp(str1, str2, 10));
+	printf("%i\n", ft_strncmp(str1, str3, 10));
+	printf("%i\n", ft_strncmp(str1, str4, 10));
 }
