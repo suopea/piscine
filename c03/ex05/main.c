@@ -9,7 +9,6 @@ int	main(void)
 	char to_add[] = "modified";
 	unsigned int result;
 
-	printf("\n\nshould be: \noriginal modi\n8\n\nresult:\n");
 	result = ft_strlcat(orig, to_add, 4);
 	printf("%s\n%i\n", orig, result);
 }
