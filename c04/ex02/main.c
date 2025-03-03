@@ -17,6 +17,11 @@ int	main(void)
 	test(INT_MIN);
 	test(-12345);
 	test(12345);
+	test(10);
+	test(9);
+	test(1);
 	test(0);
+	test(-1);
+	test(-10);
 	test(42);
 }

@@ -23,6 +23,7 @@ int	main(void)
 	test("no numbers should maybe return zero?");
 	test("something other than + or - or whitespace before 123 should probably be 0");
 	test(" \f\n\r\t\v1337 all specified whitespaces in the beginning");
+	test("+-+   +-+123 whitespace between signs should be 0");
 }
 
 // isspace means   09, 10, 11, 12, 13, 32
