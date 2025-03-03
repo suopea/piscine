@@ -12,6 +12,7 @@ void	test(int n, int pow, int answer)
 
 int	main(void)
 {
+	test(0, 0, 1);
 	test(1, 0, 1);
 	test(-1, 2, 1);
 	test(1, -1, 0);
