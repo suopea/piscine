@@ -24,6 +24,8 @@ int	main(void)
 	test(6, 7);
 	test(9, 11);
 	test(42, 43);
+	test(99990, 99991);
 	test(99991, 99991);
+	test(99992, 100003);
 	test(INT_MAX, 0);
 }

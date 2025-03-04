@@ -12,12 +12,13 @@ void	test(int n, int answer)
 
 int	main(void)
 {
-	test(0, 0);
+	test(0, 1);
 	test(1, 1);
 	test(2, 2);
 	test(3, 6);
 	test(4, 24);
 	test(5, 120);
 	test(6, 720);
+	test(12, 479001600);
 	test(-1, 0);
 }

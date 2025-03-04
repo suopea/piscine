@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 int	ft_sqrt(int in);
 
@@ -12,6 +13,7 @@ void	test(int n, int answer)
 
 int	main(void)
 {
+	test(-1, 0);
 	test(0, 0);
 	test(1, 1);
 	test(2, 0);
@@ -21,4 +23,5 @@ int	main(void)
 	test(6, 0);
 	test(9, 3);
 	test(42, 0);
+	test(INT_MAX, 0);
 }

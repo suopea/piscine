@@ -24,6 +24,10 @@ int	main(void)
 	test(6, 0);
 	test(9, 0);
 	test(42, 0);
+	test(99989, 1);
+	test(99990, 0);
 	test(99991, 1);
+	test(99992, 0);
+	test(99993, 0);
 	test(INT_MAX, 0);
 }
