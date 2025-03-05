@@ -2,15 +2,17 @@
 #include <stdlib.h>
 #include <limits.h>
 
-int	*ft_range(int min, int max);
+int	ft_ultimate_range(int **range, int min, int max);
 
 void	test(int min, int max)
 {
 	printf("min: %i\nmax: %i\n", min, max);
-	int	*range = ft_range(min, max);
+	int	*range = NULL;
+	int size = ft_ultimate_range(&range, min, max);
 	if (range && min < max && max - min < 100)
 	{
 		int i = 0;
+		printf("size: %i\n", size);
 		while (i < max - min)
 		{
 			printf("%i ", range[i]);
@@ -20,13 +22,13 @@ void	test(int min, int max)
 	if (range && min < max && max - min >= 100)
 	{
 		printf("%i, %i, %i, ...  %i, %i, %i. ", 
-						range[0], range[1], range[3], 
+						range[0], range[1], range[2], 
 						range[max - min - 3], 
 						range[max - min - 2], 
 						range[max - min - 1]);
 	}
 	if (!range)
-		printf("%p", range);
+		printf("%p, size: %i \n", range, size);
 	printf("\n\n");
 	free(range);
 }
