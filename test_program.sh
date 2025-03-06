@@ -27,5 +27,5 @@ cat ../c$1/ex$2/*.c | grep "#include" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o
 
 echo "\n\n${UNDERLINE}                                                                    ${WHITE}  c$1 ex$2\n"
 
-find ../c$1/ex$2/*.c
+find ../c$1/ex$2/*
 echo "\n"
