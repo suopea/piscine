@@ -11,6 +11,8 @@ echo "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 
 cat ../s/c$1/ex$2/*.c | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
+
+
 echo "\n\n\n\n\n\n\n\n\n"
 
 echo "\n\n\n${UNDERLINE}                                                                      TEST FILE${WHITE} \n\n"
@@ -23,10 +25,12 @@ echo "\n\n\n${UNDERLINE}                                                        
 norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/*.c | sed 's/Error*/Error\o033[1;31m/' | sed 's/OK!/\o033[1;32m OK!/'
 
 echo "\n\n\n${UNDERLINE}                                                                         OUTPUT${WHITE} \n\n" 
-cc -g -Wall -Wextra -Werror ../c$1/ex$2/*.c ./c$1/ex$2/*.c && ./a.out
+cc -Wall -Wextra -Werror -fsanitize=address -fsanitize=leak -fsanitize=undefined -ggdb3 ../c$1/ex$2/*.c ./c$1/ex$2/*.c
 
 echo "\n\n"
 cat ../c$1/ex$2/*.c | grep "#include" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o033[0m is it allowed?/' | sed 's/#include/\n/'
+
+cc -g -Wall -Wextra -Werror ../c$1/ex$2/*.c ./c$1/ex$2/*.c && valgrind ./a.out
 
 echo "\n\n${UNDERLINE}                                                                    ${WHITE}  c$1 ex$2\n"
 
