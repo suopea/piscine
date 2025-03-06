@@ -33,12 +33,12 @@ echo "\n\n"
 
 cc -g -Wall -Wextra -Werror ./c$1/ex$2/*.h ./c$1/ex$2/*.c && valgrind ./a.out
 
-rm ./c$1/ex$2/*.h
-rm ./c$1/ex$2/*.gch
-rm ../c$1/ex$2/*.gch
 
 echo "\n\n${UNDERLINE}                                                                    ${WHITE}  c$1 ex$2\n"
 
+rm ./c$1/ex$2/*.h
+rm ./c$1/ex$2/*.gch
+rm ../c$1/ex$2/*.gch
 find ../c$1/ex$2/*
 find ./c$1/ex$2/*
 echo "\n"
