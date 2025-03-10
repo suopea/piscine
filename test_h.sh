@@ -19,7 +19,7 @@ echo "\n\n\n${UNDERLINE}                                                        
 cat ./c$1/ex$2/*.c | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
 echo "\n\n\n${UNDERLINE}                                                                  EXERCISE FILE${WHITE}\n\n"
-cat ../c$1/ex$2/*.h | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
+cat ../c$1/ex$2/*.h | sed 's/\t/    /g'
 
 echo "\n\n\n${UNDERLINE}                                                                     NORMINETTE${WHITE} \n\n"
 norminette -R CheckDefine ../c$1/ex$2/*.h | sed 's/Error*/Error\o033[1;31m/' | sed 's/OK!/\o033[1;32m OK!/'
