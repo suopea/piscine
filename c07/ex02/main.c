@@ -21,6 +21,7 @@ void	test(int min, int max)
 	}
 	if (range && min < max && max - min >= 100)
 	{
+		printf("size: %i\n", size);
 		printf("%i, %i, %i, ...  %i, %i, %i. ", 
 						range[0], range[1], range[2], 
 						range[max - min - 3], 
@@ -41,6 +42,7 @@ int	main(void)
 	test(0, 1000);
 	test(-9, 9);
 	test(-1000000, 1000000);
-//	test(INT_MIN, INT_MAX);
+	test(INT_MIN, INT_MIN + 5);
+	test(INT_MAX - 5, INT_MAX);
 	test(1, 0);
 }

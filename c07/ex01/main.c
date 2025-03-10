@@ -39,6 +39,7 @@ int	main(void)
 	test(0, 1000);
 	test(-9, 9);
 	test(-1000000, 1000000);
-//	test(INT_MIN, INT_MAX);
+	test(INT_MIN, INT_MIN + 5);
+	test(INT_MAX - 5, INT_MAX);
 	test(1, 0);
 }

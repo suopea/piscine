@@ -10,19 +10,19 @@ void	test(char *original)
 
 	printf("using  standard   to copy  \"%s\": \"%s\" \n", original, standard_string);
 
-//	char	*ft_string = ft_strdup(original);
-//	printf("using  ft_strdup  to copy  \"%s\": \"%s\" \n\n", original, ft_string);
+	char	*ft_string = ft_strdup(original);
+	printf("using  ft_strdup  to copy  \"%s\": \"%s\" \n\n", original, ft_string);
 	free(standard_string);
-//	free(ft_string);
+	free(ft_string);
 }
 
 int	main(void)
 {
 	char	*asd = "asd";
-//	char	*empty = "";
+	char	*empty = "";
 
 	test(asd);
-//	test(empty);
+	test(empty);
 }
 
 // test non null terminated?
