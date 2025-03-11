@@ -30,8 +30,8 @@ cat ../c$1/ex$2/* | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
 echo "\n\n\n${UNDERLINE}                                                                     NORMINETTE${WHITE} \n\n"
 
-norminette -R CheckForbiddenSourceHeader ./temp/*.c
-norminette -R CheckForbiddenSourceHeader ./temp/*.h
+norminette -R CheckForbiddenSourceHeader ./temp/ft*.c | grep -v "no such" | grep -v "gch"
+norminette -R CheckDefine ./temp/ft*.h | grep -v "no such" | grep -v "gch"
 
 ## | sed 's/Error*/Error\o033[1;31m/' | sed 's/OK!/\o033[1;32m OK!/'
 
@@ -42,7 +42,7 @@ cc -g -Wall -Wextra -Werror ./temp/* && valgrind --show-leak-kinds=all --track-f
 cat ../c$1/ex$2/* | grep "#include" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o033[0m is it allowed?/' | sed 's/#include/\n/'
 
 echo "\n\n${UNDERLINE}                                                                    ${WHITE}  c$1 ex$2\n"
-rm -rf temp
-find ../c$1/ex$2/*
-find ./c$1/ex$2/*
+rm -rf temp | grep -v "no such"
+find ../c$1/ex$2/* | grep -v "no such"
+find ./c$1/ex$2/* | grep -v "no such"
 echo "\n"
