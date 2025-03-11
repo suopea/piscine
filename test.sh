@@ -34,7 +34,7 @@ norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/* | sed 's/Error*/Error\o03
 
 echo "\n\n\n${UNDERLINE}                                                                         OUTPUT${WHITE} \n\n" 
 
-cc -g -Wall -Wextra -Werror ./temp/* && valgrind ./a.out
+cc -g -Wall -Wextra -Werror ./temp/* && valgrind --show-leak-kinds=all --track-fds=yes ./a.out
 
 cat ../c$1/ex$2/* | grep "#include" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o033[0m is it allowed?/' | sed 's/#include/\n/'
 
