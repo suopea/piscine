@@ -6,7 +6,7 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 11:12:47 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/03/10 11:47:16 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/03/11 15:09:40 by jiawli           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ char	*ft_strjoin(int size, char **strs, char *sep);
 
 int	main(int argc, char **argv)
 {
-	int size = argc - 1;
+
+	int size = argc - 2;
+	if (argc <3)
+		size = 0;
+
 	char *sep = argv[1];
 	char **strs = argv + 2;
 	char *out = ft_strjoin(size, strs, sep);
