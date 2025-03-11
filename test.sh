@@ -30,7 +30,10 @@ cat ../c$1/ex$2/* | pygmentize -l c -O style=monokai | sed 's/\t/    /g'
 
 echo "\n\n\n${UNDERLINE}                                                                     NORMINETTE${WHITE} \n\n"
 
-norminette -R CheckForbiddenSourceHeader ../c$1/ex$2/* | sed 's/Error*/Error\o033[1;31m/' | sed 's/OK!/\o033[1;32m OK!/'
+norminette -R CheckForbiddenSourceHeader ./temp/*.c
+norminette -R CheckForbiddenSourceHeader ./temp/*.h
+
+## | sed 's/Error*/Error\o033[1;31m/' | sed 's/OK!/\o033[1;32m OK!/'
 
 echo "\n\n\n${UNDERLINE}                                                                         OUTPUT${WHITE} \n\n" 
 
