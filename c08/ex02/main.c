@@ -11,4 +11,6 @@ int	main(void)
 	test(0);
 	test(1);
 	test(-1);
+	test(10);
+	test(-10);
 }
