@@ -6,12 +6,14 @@
 /*   By: ssuopea <ssuopea@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 15:33:37 by ssuopea           #+#    #+#             */
-/*   Updated: 2025/03/11 18:26:25 by ssuopea          ###   ########.fr       */
+/*   Updated: 2025/03/12 12:30:50 by ssuopea          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
 #include <stdlib.h>
+
+void	ft_show_tab(struct s_stock_str *par);
 
 int	ft_strlen(char *str)
 {
@@ -62,4 +64,20 @@ t_stock_str	*ft_strs_to_tab(int ac, char **av)
 	}
 	out[i].str = 0;
 	return (out);
+}
+
+int	main(int argc, char **argv)
+{
+	t_stock_str	*tab;
+	int			i;
+
+	tab = ft_strs_to_tab(argc - 1, argv + 1);
+	i = 0;
+	ft_show_tab(tab);
+	while (tab[i].str)
+	{
+		free(tab[i].copy);
+		i++;
+	}
+	free(tab);
 }
