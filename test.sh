@@ -39,7 +39,7 @@ echo "\n\n\n${UNDERLINE}                                                        
 
 cc -g -Wall -Wextra -Werror ./temp/* && valgrind --show-leak-kinds=all --track-fds=yes ./a.out
 
-cat ../c$1/ex$2/* | grep "#include" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o033[0m is it allowed?/' | sed 's/#include/\n/'
+cat ../c$1/ex$2/* | grep ".h>" | sed 's/$/ \o033[1;31mEXTERNAL LIBRARY:\o033[0m is it allowed?/' | sed 's/#include/\n/'
 
 echo "\n\n${UNDERLINE}                                                                    ${WHITE}  c$1 ex$2\n"
 rm -rf temp | grep -v "no such"
